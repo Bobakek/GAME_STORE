@@ -5,7 +5,7 @@ from django.db import models
 
 class Buyer(models.Model):
     name = models.CharField(max_length=255, unique=True)  # Имя покупателя (username)
-    balance = models.DecimalField(max_digits=10, decimal_places=2)  # Баланс
+    balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)  # Баланс
     age = models.PositiveIntegerField()  # Возраст
 
     def __str__(self):
