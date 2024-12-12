@@ -22,3 +22,10 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
+class News(models.Model):
+    title = models.CharField(max_length=200)  # Заголовок новости
+    content = models.TextField()              # Содержимое новости
+    date = models.DateTimeField(auto_now_add=True)  # Дата добавления
+
+    def __str__(self):
+        return self.title

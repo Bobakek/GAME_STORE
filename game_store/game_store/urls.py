@@ -26,4 +26,5 @@ urlpatterns = [
     path('cart/', views.cart, name='cart'),  # Корзина
     path('register/', views.sign_up_by_django, name='register'),  # Регистрация
     path('admin/', admin.site.urls),
+    path('platform/news/', views.news, name='news'),  # Новости
 ]
